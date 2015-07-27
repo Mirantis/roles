@@ -26,7 +26,7 @@ class roles::deploy {
   include ::profiles::common::packages
   include ::profiles::ssh::server
   include ::profiles::firewall::purge
-  include ::profiles::firewall::cicd
+  include ::profiles::firewall::deploy
   include ::profiles::deploy
 
   # Order classes in the order we want them applied
@@ -38,7 +38,7 @@ class roles::deploy {
   Class['::profiles::common::packages'] ->
   Class['::profiles::ssh::server'] ->
   Class['::profiles::firewall::purge'] ->
-  Class['::profiles::firewall::cicd'] ->
+  Class['::profiles::firewall::deploy'] ->
   Class['::profiles::deploy']
 
 }
