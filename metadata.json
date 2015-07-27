@@ -1,0 +1,14 @@
+{
+  "name": "mirantis-roles",
+  "version": "0.1.0",
+  "author": "mirantis",
+  "summary": "Roles module for MOX Puppet",
+  "license": "Apache 2.0",
+  "source": "gerrit.mirantis.com/#/admin/projects/mirantis-openstack-express/puppet-roles",
+  "project_page": null,
+  "issues_url": null,
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
