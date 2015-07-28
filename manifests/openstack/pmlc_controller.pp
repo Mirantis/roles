@@ -19,6 +19,7 @@
 class roles::openstack::pmlc_controller {
 
   include ::profiles::ntp::client
+  include ::profiles::common::users
   include ::profiles::common::sudo
   include ::profiles::common::packages
   include ::profiles::ssh::server
@@ -29,6 +30,7 @@ class roles::openstack::pmlc_controller {
 
   # Order classes in the order we want them applied
   Class['::profiles::ntp::client'] ->
+  Class['::profiles::common::users'] ->
   Class['::profiles::common::sudo'] ->
   Class['::profiles::common::packages'] ->
   Class['::profiles::ssh::server'] ->
